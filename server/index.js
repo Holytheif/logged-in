@@ -16,10 +16,7 @@ var cors_1 = require("cors");
 var mongoose_1 = require("mongoose");
 var user_1 = require("./model/user");
 var jsonwebtoken_1 = require("jsonwebtoken");
-var dotenv_1 = require("dotenv");
-dotenv_1["default"].config({ path: "./config.env" });
 var app = (0, express_1["default"])();
-var port = 8000;
 var url = process.env.URL;
 var token_key = process.env.TOKEN_KEY;
 mongoose_1["default"]
