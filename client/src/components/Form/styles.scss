@@ -1,0 +1,28 @@
+.action-form {
+	width: 100%;
+}
+
+label {
+	display: block;
+	color: rgbrgba(0, 0, 0, 0.824);
+	color: #0c161d;
+	font-weight: 700;
+	margin-bottom: 1rem;
+}
+input {
+	border: none;
+	outline: none;
+	font-size: 1.05rem;
+	border-bottom: 1px solid #0c161d;
+	margin-bottom: 2rem;
+	width: 100%;
+	padding: 0.2rem 0;
+	font-weight: 700;
+}
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+	box-shadow: 0 0 0 30px white inset;
+	-webkit-box-shadow: 0 0 0 30px white inset;
+}

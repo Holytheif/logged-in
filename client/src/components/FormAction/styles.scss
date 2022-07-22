@@ -1,0 +1,40 @@
+.action-box {
+	margin-top: 2rem;
+	display: flex;
+	justify-content: space-between;
+	margin-bottom: 2rem;
+
+	button {
+		border: none;
+		outline: none;
+		background: transparent;
+		cursor: pointer;
+		border: 2px solid #0c161d;
+		color: #0c161d;
+		// border-radius: 6px;
+		padding: 0.5rem;
+		font-size: 1.25rem;
+		letter-spacing: 1px;
+		font-weight: 700;
+	}
+	button:hover {
+		color: white;
+		background-color: #0c161d;
+		border: 2px solid black;
+	}
+	.switch-btn {
+		font-size: 1.2rem;
+		border: none;
+		font-weight: 400;
+		font-weight: 700;
+	}
+	.switch-btn:hover {
+		background: transparent;
+		color: #0c161d;
+		text-decoration: underline #0c161d;
+		text-underline-offset: 10px;
+		text-decoration-thickness: 2px;
+		border-radius: 0%;
+		border: none;
+	}
+}
