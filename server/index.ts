@@ -4,10 +4,8 @@ import mongoose from "mongoose";
 import { User } from "./model/user";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
-dotenv.config({ path: "./config.env" });
 
 const app = express();
-const port: number = 8000;
 const url = process.env.URL;
 const token_key = process.env.TOKEN_KEY;
 
