@@ -26,8 +26,8 @@ mongoose_1["default"]
     })["catch"](function (err) {
         console.error("Error connecting to the database. ".concat(err));
     });
-app.use((0, cors_1["default"])());
-app.use(express_1["default"].json());
+app.use((cors_1()));
+app.use(express_1.json());
 if (process.env.NODE_ENV == "production") {
     app.use(express_1["default"].static("client/build"));
     var path_1 = require("path");
