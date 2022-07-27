@@ -1,0 +1,21 @@
+{
+	"compilerOptions": {
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
+		"strict": true,
+		"resolveJsonModule": true,
+		"module": "node16",
+		"moduleResolution": "node",
+		"target": "ESNext",
+		"outDir": "./dist",
+		"rootDir": ".",
+		"esModuleInterop": true,
+		"lib": ["ESNext", "dom"],
+		"sourceMap": false,
+		"jsx": "react-jsx"
+	},
+	"include": ["."],
+	"exclude": ["node_modules", "client"]
+}
