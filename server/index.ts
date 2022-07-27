@@ -4,6 +4,9 @@ import mongoose from "mongoose";
 import { User } from "./model/user";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import { decodedTextSpanIntersectsWith } from "typescript";
+dotenv.config({ path: "./config.env" });
+console.log(process.env);
 
 const app = express();
 const url = process.env.URL;

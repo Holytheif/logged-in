@@ -1,12 +1,21 @@
 {
 	"compilerOptions": {
-		"target": "es5",
-		"module": "node16",
-		"rootDir": "./",
-		"outDir": "./build",
-		"esModuleInterop": true,
+		"noImplicitAny": true,
+		"noImplicitReturns": true,
+		"noUnusedLocals": false,
+		"noUnusedParameters": false,
 		"strict": true,
-		"jsx": "react"
+		"resolveJsonModule": true,
+		"module": "node16",
+		"moduleResolution": "node",
+		"target": "ESNext",
+		"outDir": "./dist",
+		"rootDir": ".",
+		"esModuleInterop": true,
+		"lib": ["ESNext", "dom"],
+		"sourceMap": false,
+		"jsx": "react-jsx"
 	},
-	"include": ["./", "**/*.tsx"]
+	"include": ["."],
+	"exclude": ["node_modules"]
 }
