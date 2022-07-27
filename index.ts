@@ -4,9 +4,9 @@ import mongoose from "mongoose";
 import { User } from "./model/user";
 import jwt from "jsonwebtoken";
 import dotenv from "dotenv";
+import path from "path";
 import { decodedTextSpanIntersectsWith } from "typescript";
 dotenv.config({ path: "./config.env" });
-console.log(process.env);
 
 const app = express();
 const url = process.env.URL;
@@ -31,9 +31,7 @@ mongoose
 app.use(CORS());
 app.use(express.json());
 if (process.env.NODE_ENV == "production") {
-	app.use(express.static("public"));
-
-	const path = require("path");
+	app.use(express.static(path.join(__dirname, "public")));
 }
 app.post("/signup", (req: Request, res: Response) => {
 	const signUpFormData: FormDataType = req.body;
