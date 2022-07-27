@@ -15,15 +15,6 @@ export default function Prompt(props: IPromptProps) {
 					<p>
 						Log in <span className="success"> successful!</span>
 					</p>
-					<button
-						className="logout-btn"
-						type="button"
-						onClick={() => {
-							props.setLogOut(true);
-						}}
-					>
-						Log Out
-					</button>
 				</>
 			) : (
 				<p>
