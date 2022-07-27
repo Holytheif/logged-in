@@ -12,4 +12,3 @@ Have a look at some of the packages:
 -   **CryptoJS** for hashing user password on client side before sending to server.
 -   **jsonwebtoken** for generating token to allow login functionality.
 
-> Yet to deploy so wait till then ...😄
