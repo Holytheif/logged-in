@@ -18,24 +18,27 @@ export type FormDataType = {
 	password: string;
 	token: string;
 };
-
-mongoose
-	.connect(url as string)
-	.then(() => {
-		console.log("Connected to the database ");
-	})
-	.catch((err) => {
-		console.error(`Error connecting to the database. ${err}`);
-	});
+try {
+	mongoose
+		.connect(url as string)
+		.then(() => {
+			console.log("Connected to the database ");
+		})
+		.catch((err) => {
+			throw err;
+		});
+} catch (error) {
+	console.log("error message: ", error);
+}
 
 app.use(CORS());
 app.use(express.json());
 if (process.env.NODE_ENV == "production") {
-	app.use(express.static(path.join(__dirname, "public")));
+	app.use(express.static(path.join(__dirname, "dist/public")));
 }
 
-app.use("*", (req: Request, res: Response) => {
-	res.sendFile(path.join(__dirname, "./public/static/index.html"));
+app.all("*", (req: Request, res: Response) => {
+	res.sendFile(path.join(__dirname, "./dist/public/static/index.html"));
 });
 
 app.post("/signup", (req: Request, res: Response) => {
