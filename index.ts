@@ -33,6 +33,11 @@ app.use(express.json());
 if (process.env.NODE_ENV == "production") {
 	app.use(express.static(path.join(__dirname, "public")));
 }
+
+app.use("*", (req: Request, res: Response) => {
+	res.sendFile(path.join(__dirname, "./public/static/index.html"));
+});
+
 app.post("/signup", (req: Request, res: Response) => {
 	const signUpFormData: FormDataType = req.body;
 	const query = User.where({ mail: signUpFormData.mail });

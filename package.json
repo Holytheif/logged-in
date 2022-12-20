@@ -6,7 +6,7 @@
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
 		"start": "node ./dist/index.js",
-		"heroku-postbuild": "webpack --env production && cd client && npm install && npm run build",
+		"dev": "webpack --env production && cd client && npm install && npm run build",
 		"webpack": "webpack"
 	},
 	"author": "",
